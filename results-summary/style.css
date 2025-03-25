@@ -26,6 +26,7 @@ html {
     padding: 0;
     display: grid;
     place-items: start center;
+    background-color: hsl(221, 100%, 96%);
 }
 
 body {
