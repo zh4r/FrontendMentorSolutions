@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Work Sans';
+    background-color: hsl(275, 100%, 97%);
+    color: hsl(292, 42%, 14%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+}
+
+section,
+header {
+    margin: 1rem .5rem .8rem 1.6rem;
+}
+
+section:last-of-type {
+    padding-bottom: .5rem;
+}
+
+.starImg {
+    max-height: 1.4rem;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: .5rem 0 0 1.1rem;
+}
+
+main {
+    border-radius: .5rem;
+    background-color: hsl(0, 0%, 100%);
+    max-width: 290px;
+    box-shadow: rgba(105, 105, 105, 0.244) 1px 1px 15px;
+    transition: box-shadow .5s ease-in;
+}
+
+main:hover {
+    box-shadow: rgba(105, 105, 105, 0.483) 4px 4px 35px;
+    transition: box-shadow .5s ease-in;
+}
+
+.accordionBtn {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    color: hsl(292, 42%, 14%);
+    font-size: .9rem;
+    font-weight: 600;
+    transition: color .5s ease;
+}
+
+.accordionBtn:hover {
+    color: hsl(290, 100%, 42%);
+    text-shadow: 2px 2px 18px rgba(26, 26, 26, 0.142);
+    transition: all .5s ease;
+}
+
+span {
+    max-width: 80%;
+}
+
+.plusMinusImg {
+    max-height: 1.8rem;
+    margin-left: auto;
+}
+
+p {
+    font-size: .75rem;
+    padding: 1rem 1.2rem .5rem 0;
+    line-height: 1.3rem;
+    color: hsl(292, 16%, 49%);
+    width: 100%;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease;
+}
+
+.opened {
+    max-height: 11rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    width: .2rem;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(276, 71%, 93%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(277, 89%, 89%);
+}
+
+hr {
+    width: 95%;
+    margin-left: 0;
+    margin-top: 1rem;
+    border: solid .1rem hsla(293, 16%, 49%, 0.11);
+}
+
+@media (min-width: 520px) {
+    main {
+        min-width: 510px;
+        max-width: 30vw;
+        border-radius: .7rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin: 0 0 0 1.1rem;
+    }
+
+    p {
+        font-size: .85rem;
+    }
+
+    section {
+        margin-left: 2rem;
+    }
+
+    section:last-of-type {
+        padding-bottom: 1rem;
+    }
+
+    header {
+        margin-top: 2.2rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .starImg {
+        max-height: 2.1rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    #banner {
+        content: url(./assets/images/background-pattern-desktop.svg);
+    }
+}
