@@ -2,11 +2,11 @@
 
 :root {
     --desatRed: hsl(0, 36%, 70%);
+    --desatRedChngble: 0, 100%, 50%;
     --softRed: hsl(0, 93%, 68%);
     --darkGRed: hsl(0, 6%, 24%);
     --grad1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     --grad2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    --trsprntDesatRed: hsla(0, 36%, 70%, 0.477);
 }
 
 html {
@@ -14,6 +14,10 @@ html {
     font-size: 16px;
     display: grid;
     place-items: center;
+    background: var(--grad1);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
 body {
@@ -21,7 +25,7 @@ body {
     place-items: center;
     margin: 0;
     padding: 0;
-    width: 390px;
+    width: 375px;
 }
 
 
@@ -67,6 +71,7 @@ h1 {
 }
 
 p {
+    margin-top: -.7rem;
     line-height: 1.5rem;
     font-size: .9rem;
     padding: 0 1.2rem 0 1.2rem;
@@ -77,32 +82,36 @@ p {
 form {
     position: relative;
     width: 90%;
+    margin-top: .5rem;
 }
 
 
-#errMsg {
-    text-align: left;
-    color: var(--softRed);
-}
 
 input {
     border-radius: 5rem;
-    border-color: var(--trsprntDesatRed);
+    border-color: hsla(var(--desatRedChngble), .1);
     border-style: solid;
-    border-width: .05rem;
+    border-width: .1rem;
     padding: 1rem;
     width: 85%;
 }
 
 input::placeholder {
-    color: var(--trsprntDesatRed);
+    color: hsla(var(--desatRedChngble), .2);
     font-weight: 500;
     padding: 0 .5rem;
     font-size: .95rem;
     font-family: "Josefin Sans";
 }
 
+input:focus, input:hover {
+    border-color: var(--desatRed);
+    border-width: .2rem;
+    padding: .9rem;
+}
+
 button {
+    box-sizing: border-box;
     border-radius: 5rem;
     width: 65px;
     height: 50px;
@@ -113,15 +122,29 @@ button {
     cursor: pointer;
     background: var(--grad2);
     border-style: none;
-
+    box-shadow: 2px 5px 32px hsla(var(--desatRedChngble), .3);
+    transition: all .5s ease;
     img {
-        padding: .9rem .3rem .9rem .7rem;
+        padding: .9rem .4rem .9rem .6rem;
     }
+}
+
+button:hover {
+    box-shadow: 2px 10px 32px hsla(var(--desatRedChngble), .5);
+    width: 72px;
+    background: var(--grad2);
+;
 }
 
 #errorImg {
     width: 1.5rem;
     position: absolute;
-    top: 15px;
+    top: 13px;
     right: 80px;
+}
+
+#errMsg {
+    text-align: left;
+    color: var(--softRed);
+    margin: .4rem;
 }
