@@ -4,12 +4,16 @@
     --desatRed: hsl(0, 36%, 70%);
     --softRed: hsl(0, 93%, 68%);
     --darkGRed: hsl(0, 6%, 24%);
-    --grad1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)) --grad2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))
+    --grad1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --grad2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    --trsprntDesatRed: hsla(0, 36%, 70%, 0.477);
 }
 
 html {
     font-family: 'Josefin Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
+    display: grid;
+    place-items: center;
 }
 
 body {
@@ -17,7 +21,7 @@ body {
     place-items: center;
     margin: 0;
     padding: 0;
-    width: 375px;
+    width: 390px;
 }
 
 
@@ -49,7 +53,7 @@ main {
 
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     text-align: center;
     letter-spacing: .8rem;
     font-weight: 600;
@@ -69,19 +73,55 @@ p {
     text-align: center;
 }
 
+
 form {
     position: relative;
+    width: 90%;
+}
+
+
+#errMsg {
+    text-align: left;
+    color: var(--softRed);
 }
 
 input {
     border-radius: 5rem;
-    border-color: var(--desatRed);
+    border-color: var(--trsprntDesatRed);
     border-style: solid;
     border-width: .05rem;
-    padding: 1rem;    
-    width: 100%;
+    padding: 1rem;
+    width: 85%;
 }
-    input::placeholder {
-        color: var(--desatRed);
-        font-weight: 500;
+
+input::placeholder {
+    color: var(--trsprntDesatRed);
+    font-weight: 500;
+    padding: 0 .5rem;
+    font-size: .95rem;
+    font-family: "Josefin Sans";
+}
+
+button {
+    border-radius: 5rem;
+    width: 65px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: var(--grad2);
+    border-style: none;
+
+    img {
+        padding: .9rem .3rem .9rem .7rem;
     }
+}
+
+#errorImg {
+    width: 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: 80px;
+}
