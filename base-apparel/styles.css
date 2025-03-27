@@ -18,6 +18,7 @@ html {
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 body {
@@ -92,8 +93,9 @@ input {
     border-color: hsla(var(--desatRedChngble), .1);
     border-style: solid;
     border-width: .1rem;
-    padding: 1rem;
-    width: 85%;
+    padding: 1rem 3.8rem 1rem 1rem;
+    width: 75%;
+    transition: all .2s;
 }
 
 input::placeholder {
@@ -106,8 +108,7 @@ input::placeholder {
 
 input:focus, input:hover {
     border-color: var(--desatRed);
-    border-width: .2rem;
-    padding: .9rem;
+    box-shadow: 0 0 1rem .1rem hsla(var(--desatRedChngble), .3)
 }
 
 button {
@@ -122,29 +123,30 @@ button {
     cursor: pointer;
     background: var(--grad2);
     border-style: none;
-    box-shadow: 2px 5px 32px hsla(var(--desatRedChngble), .3);
-    transition: all .5s ease;
+    box-shadow: .3rem .3rem 1.5rem hsla(var(--desatRedChngble), .3);
+    transition: all .4s ease;
     img {
         padding: .9rem .4rem .9rem .6rem;
     }
 }
 
 button:hover {
-    box-shadow: 2px 10px 32px hsla(var(--desatRedChngble), .5);
-    width: 72px;
-    background: var(--grad2);
-;
+    box-shadow: 0 .6rem 1.2rem hsla(var(--desatRedChngble), .4);
+    width: 4.8rem;
+    filter: brightness(1.2);
 }
 
 #errorImg {
     width: 1.5rem;
     position: absolute;
-    top: 13px;
-    right: 80px;
+    top: .8rem;
+    right: 5rem;
+    visibility: hidden;
 }
 
 #errMsg {
     text-align: left;
     color: var(--softRed);
     margin: .4rem;
+    visibility: hidden;
 }
