@@ -121,6 +121,7 @@ button {
     top: 0;
     right: 0;
     cursor: pointer;
+    color: white;
     background: var(--grad2);
     border-style: none;
     box-shadow: .3rem .3rem 1.5rem hsla(var(--desatRedChngble), .3);
@@ -149,4 +150,27 @@ button:hover {
     color: var(--softRed);
     margin: .4rem;
     visibility: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+#mailSpan {
+    color: var(--softRed);
+}
+
+#subForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    text-align: center;
+}
+
+#dismissBtn {
+    position: relative;
+    width: 80%;
+    text-align: center;
 }

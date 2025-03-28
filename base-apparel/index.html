@@ -19,7 +19,7 @@
 <body>
     <img src="./images/logo.svg" alt="base apparel logo" class="logo">
     <img src="./images/hero-mobile.jpg" alt="model photo" class="banner">
-    <main>
+    <main id="mainInput">
         <h1><span class="desatRed w300">We're</span> coming soon</h1>
 
         <p class="desatRed">
@@ -28,19 +28,19 @@
         </p>
 
         <form>
-            <input type="email" placeholder="Email Address" onkeyup="validateEmail()" required><img
+            <input type="email" placeholder="Email Address" id="email" onkeyup="validateEmail()" required><img
                 src="./images/icon-error.svg" width=20 id="errorImg"></input>
             <button><img src="./images/icon-arrow.svg" alt="button icon"></button>
         <p id="errMsg">Please enter a valid email!</p>
         </form>
     </main>
-    <!-- <footer>
-        <p class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by <a href="#">Your Name Here</a>.
-        </p>
-    </footer> -->
-    <!-- <script src="./mailValid.js"></script> -->
+    <main id="submittedMain">
+        <form id="subForm">
+            <h2>Thank you!</h2> <br><h3><span id="mailSpan">example@mail.com</span> has been added to the mailing list!</h3><br>
+            <button id="dismissBtn">Back</button>
+        </form>
+    </main>
+    <script src="./mailValid.js"></script>
 </body>
 
 </html>
